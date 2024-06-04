@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Booking Slot App</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Gas Booking Slot App</h1>
+        </header>
+
+        <main>
+            <section id="home">
+                <button onclick="showLogin()">Login</button>
+                <button onclick="showRegister()">Register</button>
+            </section>
+
+            <section id="login" class="hidden">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="text" id="loginUsername" placeholder="Username" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <button onclick="showHome()">Back</button>
+            </section>
+
+            <section id="register" class="hidden">
+                <h2>Register</h2>
+                <form id="registerForm">
+                    <input type="text" id="registerUsername" placeholder="Username" required>
+                    <input type="email" id="registerEmail" placeholder="Email" required>
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+                    <button type="submit">Register</button>
+                </form>
+                <button onclick="showHome()">Back</button>
+            </section>
+
+            <section id="booking" class="hidden">
+                <h2>Book a Slot</h2>
+                <form id="bookingForm">
+                    <input type="date" id="bookingDate" required>
+                    <input type="time" id="bookingTime" required>
+                    <select id="bookingType" required>
+                        <option value="regular">Regular</option>
+                        <option value="express">Express</option>
+                    </select>
+                    <button type="submit">Book</button>
+                </form>
+                <button onclick="showHome()">Back</button>
+            </section>
+
+            <section id="confirmation" class="hidden">
+                <h2>Booking Confirmation</h2>
+                <p id="confirmationMessage"></p>
+                <button onclick="showHome()">Home</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
